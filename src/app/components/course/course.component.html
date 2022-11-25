@@ -1,0 +1,125 @@
+<div class="courses-container">
+
+
+    <div class="row text-center m-20">
+    <h3>Gestionar Cursos </h3>
+    </div>
+    <div style="width: 99%;" class="row">
+        
+        <div class="col-md-4 form-container "  >
+            <div class="card form-curso">
+                <h4  style="font-family:Georgia;" class="card-title text-center ">Curso</h4>
+                <div class="card-body">
+                    <form #courseForm="ngForm" (ngSubmit)="addCourse(courseForm)">
+                        <div class="form-group">
+                            <label for="nombre"> Nombre del Curso:</label>
+                            <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre del curso" [(ngModel)]="courseService.selectedCourse.nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre"> URL de Imagen del curso:</label>
+                            <input required class="form-control" type="text" name="imagenLink" id="imagenLink" placeholder="URL de Imagen del curso" [(ngModel)]="courseService.selectedCourse.imagenLink".trim() >
+                        </div>
+                        <div class="form-group">
+                            <label for="descripcion"> Descripción del Curso:</label>
+                            <textarea  required rows="3" cols="5" placeholder="La descripción del curso" class="form-control" type="text" name="descripcion" id="descripcion"
+                            [(ngModel)]="courseService.selectedCourse.descripcion">
+                            </textarea>
+                        </div>
+                        <div class="form-group">
+                        <label for="modalidad">Modalidad:</label>
+                           <input class="form-control" name="modalidad" id="modalidad" [(ngModel)]="courseService.selectedCourse.modalidad"/>
+                      
+                        </div>
+                         
+                        <div class="form-group">
+                            <label for="categoria">Categoría:</label>
+                            <input class="form-control" name="categoria" id="categoria" [(ngModel)]="courseService.selectedCourse.categoria"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="modalidad">Inicio de Clases:</label>
+                            <input class="form-control" type="text" name="inicio_clases" id="inicio_clases" placeholder="Inicio de clases"
+                            [(ngModel)]="courseService.selectedCourse.inicio_clases">
+                        </div>
+                        <div class="form-group">
+                            <label for="modalidad">Duración:</label>
+                            <input class="form-control" type="text" name="duracion" id="duracion" placeholder="Duración del Curso" [(ngModel)]="courseService.selectedCourse.duracion">
+                        </div>
+                      
+                        <div class="form-group">
+                            <label for="modalidad">Inversión:</label>
+                            <input class="form-control" type="number" name="inversion" id="inversion" placeholder="Inversión para el Curso" [(ngModel)]="courseService.selectedCourse.inversion">
+                        </div>
+                        <div class="form-group">
+                            <label for="modalidad">Horario:</label>
+                            <input class="form-control" type="text" name="horario" id="horario" placeholder="Horario del Curso" [(ngModel)]="courseService.selectedCourse.horario">
+                        </div>
+                        <div class="form-group">
+                            <label for="modalidad">Docente:</label>
+                            <input class="form-control" type="text" name="docente" id="docente" placeholder="Docente" [(ngModel)]="courseService.selectedCourse.docente"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="modalidad">Contenido del Curso:</label>
+                            <textarea class="form-control"  name="contenido" id="contenido" cols="5" rows="3" [(ngModel)]="courseService.selectedCourse.contenido"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="modalidad">Requisitos:</label>
+                            <input class="form-control" type="text" name="requisitos" id="requisitos"  placeholder="Requisitos del Curso" [(ngModel)]="courseService.selectedCourse.requisitos">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-outline-info"  name="btn-curso" id="btn-limpiar-curso">
+                                Limpiar
+                            </button>
+                            <button class="btn btn-info"  name="btn-guardar-curso" id="btn-curso">
+                                Guardar
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="table-container col-md-8">
+            <table class="table table-striped table-bordered table-hover table-resposive-sm">
+                <thead class="table-dark">
+                    <tr>
+                        <th class="text-center">Curso</th>
+                        <th class="text-center">Modalidad</th>
+                        <th class="text-center">Inicio</th>
+                        <th class="text-center">Duración</th>
+                        <th class="text-center">Inversión</th>
+                        <th class="text-center">Horario</th>
+                        <th class="text-center">Docente</th>
+                        <th class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr *ngFor="let course of courseService.courses">
+                        <td>{{course.nombre}}</td>
+                        <td>{{course.modalidad}}</td>
+                        <td>{{course.inicio_clases}}</td>
+                        <td>{{course.duracion}}</td>
+                        <td>{{course.inversion}}</td>
+                        <td>{{course.horario}}</td>
+                     
+                        <td class="text-center">
+                            <div > {{course.docente}}</div>
+                        </td>
+                        <td>
+                            <button class="btn btn-outline-dark btn-sm">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-primary btn-sm" (click)='deleteCourse(course._id)'>
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

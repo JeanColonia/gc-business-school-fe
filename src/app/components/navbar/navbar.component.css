@@ -1,0 +1,179 @@
+/******** GNERAL***********/
+.nav {
+    width: 100%;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    
+
+}
+
+.nav-container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -10px;
+
+}
+
+a img {
+    width: 95px;
+    height: 50px;
+    margin-left: 20px;
+}
+
+/** CATEGORIAS*********/
+.dropdown__trigger {
+    color: #1c1d1f;
+    text-decoration: none;
+    font-size: 14px;
+    padding-right: 50px;
+    padding-left: 10px;
+}
+
+.dropdown-navbar a {
+    color: #1c1d1f;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown__trigger {
+    cursor: pointer;
+    
+}
+.dropdown__trigger:hover{
+    font-weight: bold;
+    font-size: 13.3px;
+    
+}
+/* Hide the dropdown's content by default */
+.dropdown__content {
+    display: none;
+
+    /* Position it right below the trigger element */
+    left: 0;
+    padding-top: 0.25rem;
+    position: absolute;
+    top: 100%;
+    margin-top:2px;
+
+    /* It should be on the top of other elements */
+    background-color: #fff;
+    z-index: 9999;
+}
+
+.trigger_child {
+    padding: 15px;
+    border-bottom: 0.2px solid rgba(139, 139, 139, 0.123);
+}
+
+.trigger_child:hover {
+    background-color: rgb(61, 61, 61);
+}
+
+.trigger_child:hover a {
+color:#fff;
+}
+
+/* Show the content when hover on the container */
+.dropdown:hover .dropdown__content {
+    display: block;
+}
+
+
+
+/******** SEARCH ********/
+
+.search-form {
+    border: 1px solid rgb(28,28,30);
+    border-radius: 40px;
+    height: 47px;
+    width: 37%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-form i {
+    color: rgb(197, 197, 197);
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+.search_input {
+    border: none;
+    height: 100%;
+    width: 70%;
+    font-size: 14px;
+}
+
+.search_input:hover {
+    border: none;
+}
+
+.search_input:focus {
+    outline: none;
+    color: rgb(85, 85, 85);
+}
+
+/*** ANCLAS*********/
+.ancla a{
+    color: #1c1d1f;
+    text-decoration: none !important;
+    font-size: 14px;
+    width: 100%;
+
+}
+
+
+.nosotros{
+    margin-left:20px;
+}
+/** login *******/
+.iniciar-sesion{
+    background-color:#1c1d1f;
+    width: 100px;
+    height: 40px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+ 
+}
+.iniciar-sesion a{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 550;
+    font-size: 14px;
+    color: #fff;
+}
+.ancla:hover a{
+    font-size: 13px;
+}
+.iniciar-sesion:hover{
+    background-color: #fff;
+    border: 1px solid rgb(61, 61, 61);
+}
+
+.iniciar-sesion:hover a{
+    color:rgb(61, 61, 61);
+    font-size: 14px;
+ 
+   
+}
+
+.ancla:hover{
+    font-weight: bold;
+}
+
+
+

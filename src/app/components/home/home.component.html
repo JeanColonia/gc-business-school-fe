@@ -1,0 +1,122 @@
+<div class="home-container">
+    <div class="banner-container">
+        <div class="banner-description">
+            <h2>¡Obten un curso ahora!</h2>
+            <p>Perfecciona tus habilidades con los mejores precios de la temporada. <b>GC Business School</b> ofrece
+                cursos desde solo S/29.90 hasta el fin de este año.</p>
+        </div>
+    </div>
+
+    <div class="body-container">
+        <h2 class="title-h2">Brindamos una amplia colección de cursos</h2>
+        <p class="paragraph">Elige entre los cursos presenciales y virtuales que brindamos en cada mes.</p>
+
+        <div class="tab-home">
+            <mat-tab-group>
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                        Contable
+                        <mat-icon class="example-tab-icon">account_balance</mat-icon>
+                    </ng-template>
+                   <div class="template-header">
+                    <h2>Amplia tus conocimientos con nuestros cursos Contables</h2>
+                    <p>Tanto si trabajas en el segmento del aprendizaje automático o de las finanzas como si deseas desarrollar tu carrera en ciencias de datos o desarrollo web, Python es una de las habilidades más importantes que puedes aprender. La sencilla sintaxis de Python es especialmente adecuada para equipos de escritorio</p>
+                    <div class="ancla iniciar-sesion">
+                        <a href="/">Explorar Contable</a>
+                       </div>
+                   </div>
+                    <div class="swiper">
+                        <div class="contable swiper-wrapper">
+
+                            <a class="course-card swiper-slide" *ngFor="let contables of cursosContables">
+                                <div class="course-img">
+                                    <img [src]="contables.imagenLink" alt="">
+                                </div>
+                                <div class="course-desc">
+                                    <span class="title">{{contables.nombre}}</span>
+                                    <p class="docente">{{contables.docente}}</p>
+                                    <span class="categoria">{{contables.categoria}} - {{contables.modalidad | uppercase}}</span>
+                                    <p class="fecha">Inicio: {{contables.inicio_clases}}</p>
+                                    <p class="precio">{{contables.inversion | currency:' PEN '}}</p>
+                                </div>
+
+                            </a>
+                        </div>
+
+                    </div>
+                </mat-tab>
+
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                     Tributario
+                     <mat-icon class="example-tab-icon">business</mat-icon>
+                    </ng-template>
+                    <div class="template-header">
+                        <h2>Aprende a detalle todo sobre las Tributaciones</h2>
+                        <p>Independientemente del sector en el que trabajes, Microsoft Office Excel es un valioso programa de hoja de cálculo para la organización y representación de datos. Excel ofrece funciones, fórmulas y tablas dinámicas para ayudarte a añadir y analizar grandes conjuntos de información.</p>
+                        <div class="ancla iniciar-sesion">
+                            <a href="/">Explorar Tributario</a>
+                           </div>
+                       </div>
+                    <div class="swiper">
+                        <div class="tributarios swiper-wrapper">
+
+                            <a class="course-card swiper-slide" *ngFor="let tributarios of cursosTributarios">
+                                <div class="course-img">
+                                    <img [src]="tributarios.imagenLink" alt="">
+                                </div>
+                                <div class="course-desc">
+                                    <span class="title">{{tributarios.nombre}}</span>
+                                    <p class="docente">{{tributarios.docente}}</p>
+                                    <span class="categoria">{{tributarios.categoria}}</span>
+                                    <p class="fecha">Inicio: {{tributarios.inicio_clases}}</p>
+                                    <p class="precio">{{tributarios.inversion | currency:' PEN '}}</p>
+                                </div>
+
+                            </a>
+                        </div>
+
+                    </div>
+                </mat-tab>
+
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                       Laboral
+                        <mat-icon class="example-tab-icon">work</mat-icon>
+                    </ng-template>
+                    <div class="template-header">
+                        <h2>Adquiere conocimientos sobre aspectos Laborales</h2>
+                        <p>Además de ser la base sobre la que se construyen la mayoría de las formas de arte, el dibujo es también una excelente manera de aliviar el estrés y de alimentar tu creatividad interior. El dibujo nos enseña a ser observadores, a desarrollar la atención al detalle y a expresarnos.</p>
+                        <div class="ancla iniciar-sesion">
+                            <a href="/">Explorar Laboral</a>
+                           </div>
+                       </div>
+                    <div class="swiper">
+                        <div class="laborales swiper-wrapper">
+                            <!-- COURSE CARD-->
+                            <a class="course-card swiper-slide" *ngFor="let laborales of cursosLaborales">
+                                <div class="course-img">
+                                    <img [src]="laborales.imagenLink" alt="">
+                                </div>
+                                <div class="course-desc">
+                                    <span class="title">{{laborales.nombre}}</span>
+                                    <p class="docente">{{laborales.docente}}</p>
+                                    <span class="categoria">{{laborales.categoria}}</span>
+                                    <p class="fecha">Inicio: {{laborales.inicio_clases}}</p>
+                                    <p class="precio">{{laborales.inversion | currency:' PEN '}}</p>
+                                </div>
+
+                            </a>
+                        </div>
+
+                    </div>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+        <div>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero consequatur necessitatibus atque quis, suscipit aliquam. Perferendis obcaecati omnis soluta ut nostrum magnam perspiciatis aliquid reiciendis dolor, architecto, officiis recusandae possimus?
+        </div>
+
+
+    </div>
+</div>

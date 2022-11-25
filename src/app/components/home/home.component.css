@@ -1,0 +1,235 @@
+.home-container {
+    width: 100%;
+    height: 100%;
+}
+
+.banner-container {
+    background-image: url("../../../assets/ímgs/home/home.jpg");
+    width: 100%;
+    height: 401px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.banner-container .banner-description {
+    background-color: #fff;
+    width: 450px;
+    height: auto;
+    padding: 20px;
+    margin-left: 60px;
+
+
+}
+
+
+.banner-description h2 {
+
+    font-family: 'SuisseWorks';
+    src: url('../../../assets/fonts/SuisseWorks.ttf');
+    font-weight: bold;
+    font-size: 38px;
+}
+
+.banner-description p {
+    font-size: 15px;
+}
+
+
+/************ BODY**************************/
+
+.body-container {
+    width: 98%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+
+
+/**** TAB-HOME********/
+.tab-home{
+    width: 95%;
+    margin:0 auto;
+    height:500px;
+
+}
+
+.template-header{
+    margin-top:35px;
+}
+.template-header h2{
+    font-size: 24px;
+    font-weight: 550;
+    padding:0;
+    margin:0;
+    padding-bottom:6px;
+}
+
+.template-header p{
+    font-size: 16px;
+    padding-bottom:10px;
+}
+
+.iniciar-sesion{
+    background-color:#fff;
+    width: 170px;
+    height: 45px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    margin-bottom:30px;
+        
+    border: 1px solid rgb(61, 61, 61);
+ 
+}
+.iniciar-sesion a{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 550;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    text-decoration:none;
+}
+.ancla:hover a{
+    font-size: 13px;
+    
+}
+.iniciar-sesion:hover{
+   
+    font-size: 14px;
+    background-color:  rgb(0, 0, 0);
+
+}
+
+.iniciar-sesion:hover a{
+    color:#fff;
+}
+
+
+
+.example-tab-icon{
+    margin-left:3px;
+    margin-top:-6px;
+    color: rgb(31, 31, 31);
+}
+.title-h2 {
+    font-family: 'SuisseWorks';
+    src: url('../../../assets/fonts/SuisseWorks.ttf');
+    font-weight: bold;
+    font-size: 35px;
+}
+
+
+/*********** COURSES***************/
+.courses-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+
+/****** SWIPER *******************/
+
+.swiper {
+    width: 100%;
+    height:auto;
+}
+
+/******** course card *************/
+.course-card {
+    width: 220px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    color:black;
+    cursor:pointer;
+    background-color: rgba(245, 243, 243, 0.432);
+}
+
+.course-img {
+    width: 100%;
+    height: 130px;
+}
+
+.course-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.course-desc  {
+    width: 100%;
+    height: 130px;
+    padding-left: 1px;
+
+
+}
+
+.course-desc .title{
+    display:block !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.1;
+padding:0px 5px 0 0px;
+margin-top:8px;
+}
+
+.course-desc .docente {
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    color: rgb(94, 94, 94);
+    padding-top: 2px;
+
+
+}
+
+
+
+.categoria {
+    font-size: 11.5px;
+    color: rgb(31, 31, 31);
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+
+}
+
+.course-desc .fecha {
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    color: rgb(73, 73, 73);
+   
+}
+
+.course-desc .precio {
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    color: rgb(73, 73, 73);
+    padding-top: 2px;
+   margin-bottom:10px;
+   font-weight: bold;
+}
+
+
+
